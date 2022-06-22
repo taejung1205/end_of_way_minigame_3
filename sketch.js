@@ -6,6 +6,11 @@ let buttonY = 100;
 let life = 5;
 let redlineStart=0;
 let cnv;
+let nanumDahengFont;
+
+function preload(){
+  nanumDahengFont = loadFont("NanumDaheng.ttf");
+}
 
 function setup() {
   cnv = createCanvas(window.innerWidth, 640);
@@ -391,6 +396,7 @@ function checklistDisplay(){
   textSize(50);
   noStroke();
   fill(102, 51, 0);
+  textFont(nanumDahengFont);
   text("체크리스트", width / 2, 50);
 
   textAlign(LEFT, CENTER);
@@ -399,15 +405,16 @@ function checklistDisplay(){
   text("1.영어공부하기", 30, 150);
   text("2.봉사활동", 30, 200);
   text("3.한국사시험 신청", 30, 250);
+  textFont('Noto Sans KR');
 
   strokeWeight(5);
   stroke(255, 0, 0, 200);
-  line(20, 150, 210, 150);
-  line(20, 200, 170, 200);
+  line(20, 155, 210, 155);
+  line(20, 205, 170, 205);
 
   strokeWeight(5);
   stroke(255, 0, 0, 200);
-  line(20, 250, 20 + redlineStart, 250);
+  line(20, 255, 20 + redlineStart, 255);
 
   if (frameCount % 5 == 0) {
     if (redlineStart <= 230) {
