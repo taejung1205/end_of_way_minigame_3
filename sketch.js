@@ -13,7 +13,7 @@ function preload(){
 }
 
 function setup() {
-  cnv = createCanvas(window.innerWidth, windowHeight);
+  cnv = createCanvas(window.innerWidth, window.innerHeight);
   cnv.elt.addEventListener('click', myTouchStarted)
 }
 
