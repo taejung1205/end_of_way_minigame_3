@@ -8,7 +8,7 @@ let redlineStart=0;
 let cnv;
 
 function setup() {
-  cnv = createCanvas(windowWidth, 640);
+  cnv = createCanvas(window.innterWidth, 640);
   cnv.elt.addEventListener('click', myTouchStarted)
 }
 
